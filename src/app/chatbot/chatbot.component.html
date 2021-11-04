@@ -1,0 +1,43 @@
+<h1>BOT</h1>
+
+<button class="btn-logo" type="button" onclick="document.getElementById('chat').style.display='block'">
+    <img class="img-logo-bot" src="assets/img/logo_chat.png">
+</button>
+
+<div class="chat" id="chat" style="display:none">
+    <button class="btn-preguntas" type="button" onclick="document.getElementById('faq').style.display='block'; document.getElementById('faq-icon').style.display='none'">
+        <img class="img-preguntas-chat" src="assets/img/preguntas_chat.png" id="faq-icon" style="display:block">
+    </button>
+    <div class="faq" id="faq" style="display:none">
+        <div class="tittle-faq">
+            Preguntas Frecuentes
+        </div>
+        <div class="cont-faq">
+            <ul>
+                <li>¿Pregunta 1?</li>
+                <li>¿Pregunta 2?</li>
+                <li>¿Pregunta 3?</li>
+                <li>¿Pregunta 4?</li>
+            </ul>
+        </div>
+    </div>
+    <div class="chat-bot">
+        <div class="titulo-bot">
+            <img class="img-logo-espe" src="assets/img/logo_espe.png">&nbsp;
+            <h2 class="titulo-parte1">CHATBOT</h2>
+            <h2 class="titulo-parte2">ESPE</h2>
+            <button class="btn-cerrar" type="button" onclick="document.getElementById('chat').style.display='none'; document.getElementById('faq-icon').style.display='block'; document.getElementById('faq').style.display='none'">
+                <img class="img-cerrar-chat" src="assets/img/cerrar_chat.png">
+            </button>
+        </div>
+        <div class="msg-bot">
+            dsf
+        </div>
+        <div class="ans-bot">
+            <form action="" class="row g-2">
+                <input type="text" class="form-control input-ans-bot col-8" placeholder="First name" aria-label="First name">&nbsp;
+                <button type="button" class="btn btn-success col-2 btn-enviar">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
