@@ -5,13 +5,16 @@
 </button>
 
 <div class="chat" id="chat" style="display:none">
-    <button class="btn-preguntas" type="button" onclick="document.getElementById('faq').style.display='block'; document.getElementById('faq-icon').style.display='none'">
+    <button class="btn-preguntas" type="button" onclick="document.getElementById('faq').style.display='block'; document.getElementById('faq-icon').style.display='none'; document.getElementById('faq-cerrar').style.display='block'">
         <img class="img-preguntas-chat" src="assets/img/preguntas_chat.png" id="faq-icon" style="display:block">
     </button>
     <div class="faq" id="faq" style="display:none">
         <div class="tittle-faq">
             Preguntas Frecuentes
         </div>
+        <button class="btn-cerrar-faqs btn-preguntas" type="button" onclick="document.getElementById('faq').style.display='none'; document.getElementById('faq-cerrar').style.display='none'; document.getElementById('faq-icon').style.display='block'">
+            <img class="img-cerrar-preguntas-chat" src="assets/img/cerrar_faqs.png"  id="faq-cerrar" style="display:block">
+        </button>
         <div class="cont-faq">
             <ul>
                 <li>¿Pregunta 1?</li>
@@ -34,9 +37,9 @@
             dsf
         </div>
         <div class="ans-bot">
-            <form action="" class="row g-2">
-                <input type="text" class="form-control input-ans-bot col-8" placeholder="First name" aria-label="First name">&nbsp;
-                <button type="button" class="btn btn-success col-2 btn-enviar">Enviar</button>
+            <form action="">
+                <input type="text" class="input-ans-bot" placeholder="First name" aria-label="Escriba su pregunta">&nbsp;
+                <button type="button" class="btn btn-success btn-enviar">Enviar</button>
             </form>
         </div>
     </div>

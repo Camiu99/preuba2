@@ -4,8 +4,8 @@
   }
 
 .img-logo-bot{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     position: fixed;
     bottom: 0%;
     right: 0%;
@@ -16,8 +16,8 @@
     border-width: .1px;
     border-style: solid;
     border-color: transparent;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 100px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -111,12 +111,17 @@
 }
 .input-ans-bot{
     border-width: 1px;
+    border-width: 1px;
     border-style: solid;
     border-color: transparent;
-    width: 300px;
+    width: 250px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
 }
 .btn-enviar{
     padding: 0px;
+    margin: 0px;
 }
 .btn-preguntas{
     position: fixed;
@@ -140,7 +145,21 @@
     padding: 5px;
 }
 .tittle-faq{
+    margin: 5px;
+    margin-left: 5px;
     color: #C92E2E;
-    text-align: center;
     font-weight: bold;
+    font-size: 13px;
+}
+.img-cerrar-preguntas-chat{
+    width: 15px;
+}
+.btn-cerrar-faqs{
+    border-width: .1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    width: 15px;
+    margin-bottom: 450px;
+    margin-right: 560px;
 }
