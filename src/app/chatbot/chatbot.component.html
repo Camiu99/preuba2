@@ -1,10 +1,8 @@
-<h1>BOT</h1>
-
 <button class="btn-logo" type="button" onclick="document.getElementById('chat').style.display='block'">
     <img class="img-logo-bot" src="assets/img/logo_chat.png">
 </button>
 
-<div class="chat" id="chat" style="display:none">
+<div class="chat" id="chat" style="display:none" ng-app="user-ask" ng-controller="user-controller">
     <button class="btn-preguntas" type="button" onclick="document.getElementById('faq').style.display='block'; document.getElementById('faq-icon').style.display='none'; document.getElementById('faq-cerrar').style.display='block'">
         <img class="img-preguntas-chat" src="assets/img/preguntas_chat.png" id="faq-icon" style="display:block">
     </button>
@@ -24,23 +22,42 @@
             </ul>
         </div>
     </div>
-    <div class="chat-bot">
+    <div class="chat-bot" ng-app="user-ask" ng-controller="user-controller">
         <div class="titulo-bot">
-            <img class="img-logo-espe" src="assets/img/logo_espe.png">&nbsp;
-            <h2 class="titulo-parte1">CHATBOT</h2>
-            <h2 class="titulo-parte2">ESPE</h2>
+            &nbsp;
+            <img class="img-logo-espe" src="assets/img/logo_espe.png">
+            <img class="img-logo-chatbot" src="assets/img/logo_chatbot-red1.png">&nbsp;
+            <!-- <h2 class="titulo-parte2">ESPE</h2>
+            <h2 class="titulo-parte1">BOT</h2> -->
+            <!-- <img class="img-manito" src="assets/img/manito.png"> -->
             <button class="btn-cerrar" type="button" onclick="document.getElementById('chat').style.display='none'; document.getElementById('faq-icon').style.display='block'; document.getElementById('faq').style.display='none'">
                 <img class="img-cerrar-chat" src="assets/img/cerrar_chat.png">
             </button>
         </div>
-        <div class="msg-bot">
-            dsf
+        <div class="global">
+            <div id="mensajes">
+                <div class="bot-resp texto mensaje">Hola! Bienvenido al ChatBot de la ESPE. En que puedo ayudarte</div>
+                <div class="predicciones"></div>
+                <div *ngFor="let div of divs" id="div{{div.id}}">
+                    <div  class="user-resp texto" >
+                        {{div.message}}
+                        <div class="hora_mensajes">
+                            {{div.tiempo}}
+                        </div>
+                    </div>
+                    <div class="bot-resp texto">
+                        {{div.messageBot}}
+                        <div class="hora_mensajes">
+                            {{div.tiempo}}
+                        </div>
+                    </div>
+                </div> 
+                <div id="divisor"></div>
+            </div>
         </div>
         <div class="ans-bot">
-            <form action="">
-                <input type="text" class="input-ans-bot" placeholder="First name" aria-label="Escriba su pregunta">&nbsp;
-                <button type="button" class="btn btn-success btn-enviar">Enviar</button>
-            </form>
+            <input autofocus class="input-ans-bot" placeholder="Escriba su pregunta" [(ngModel)]="user" class="input-ans-bot" type="text" (keydown.enter)="Enviarmsn()"/>&nbsp;
+            <a type="button" class="btn btn-success btn-enviar" value="Enviar" (click)="Enviarmsn()" href="#divisor">Enviar</a>
         </div>
     </div>
 </div>

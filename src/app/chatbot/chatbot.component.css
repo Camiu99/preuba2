@@ -2,7 +2,9 @@
     font-family: 'Title-ChatBot';
     src: url('../../assets/font/conthrax-bold-italic.otf');
   }
-
+  ::-webkit-scrollbar {
+    display: none;
+    }
 .img-logo-bot{
     width: 80px;
     height: 80px;
@@ -37,46 +39,44 @@
     position: fixed;
     bottom: 0%;
     right: 0%;
-    margin-bottom: 50px;
-    margin-right: 150px;
+    margin-bottom: 40px;
+    margin-right: 40px;
     background-color: #f8f8f8;
 }
 .titulo-bot{
     font-family: 'Title-ChatBot';
     margin-top: 10px;
-    margin-left: 20px;
+    font-weight: bold;
+    border: #fff;
+    -webkit-text-stroke: .5px #fff;
+    text-shadow: 2px 2px 2px #484848;
+    font-size: 25px;
 }
 .titulo-bot .titulo-parte1{
     color: #2E5499;
     font-weight: bold;
     display: inline-block;
-    font-size: 20px;
 }
 .titulo-bot .titulo-parte2{
     color: #448F71;
     font-weight: bold;
     display: inline-block;
-    font-size: 20px;
-}
-.img-logo-espe{
-    width: 50px;
-    height: 50px;
 }
 .img-cerrar-chat{
     width: 20px;
     position: fixed;
     bottom: 0%;
     right: 0%;
-    margin-bottom: 510px;
-    margin-right: 170px;
+    margin-bottom: 500px;
+    margin-right: 60px;
 }
 .btn-cerrar{
     width: 20px;
     position: fixed;
     bottom: 0%;
     right: 0%;
-    margin-bottom: 510px;
-    margin-right: 170px;
+    margin-bottom: 500px;
+    margin-right: 60px;
     border-width: .1px;
     border-style: solid;
     border-color: transparent;
@@ -86,16 +86,16 @@
     position: fixed;
     bottom: 0%;
     right: 0%;
-    margin-bottom: 450px;
-    margin-right: 530px;
+    margin-bottom: 440px;
+    margin-right: 420px;
 }
 .msg-bot{
     padding: 10px;
     background-color: #fff;
     margin-top: 10px;
     width: 378px;
-    min-height: 380px;
     position: fixed;
+    overflow-y: scroll;
 }
 .ans-bot{
     border-width: 1px;
@@ -103,10 +103,9 @@
     border-color: #C92E2E;
     border-radius: 10px;
     background-color: #fff;
-    margin-top: 369px;
     width: 380px;
     position: fixed;
-    right: 150px;
+    right: 40px;
     padding: 15px 5px 15px 5px;
 }
 .input-ans-bot{
@@ -139,8 +138,8 @@
     position: fixed;
     bottom: 0%;
     right: 0%;
-    margin-bottom: 280px;
-    margin-right: 540px;
+    margin-bottom: 270px;
+    margin-right: 430px;
     background-color: #f8f8f8;
     padding: 5px;
 }
@@ -160,6 +159,37 @@
     border-color: transparent;
     background-color: transparent;
     width: 15px;
-    margin-bottom: 450px;
-    margin-right: 560px;
+    margin-bottom: 440px;
+    margin-right: 450px;
+}
+.global {
+
+    padding: 10px;
+	height: 380px;
+	background: #fff;
+	overflow-y: scroll;
+}
+#mensajes {
+    height: 300px;
+	background: #fff;
+	height: auto;
+}
+.bot-resp{
+    background-color: rgb(232, 255, 195);
+    margin-right: 25%;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-top: 5px;
+    /* margin-bottom: 10px; */
+}
+.user-resp{
+    background-color: rgb(248, 248, 248);
+    margin-left: 25%;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.hora_mensajes{
+    text-align: right;
+    font-size: x-small;
 }

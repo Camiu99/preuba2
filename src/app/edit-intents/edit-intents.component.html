@@ -1,0 +1,37 @@
+<p>edit-intents works!</p>
+<div class="container">
+    <form>
+        <div class="qya row">
+            <label class="form-label col-1">Tag</label>
+            <input placeholder="Escriba el tag" type="text" class="col form-control" required/>&nbsp;
+        </div>
+        <div class="qya row">
+            <label class="form-label col-1">Pattern</label>
+            <input placeholder="Escriba el Pattern" type="text" class="col form-control" required/>&nbsp;
+            <button class="btn btn-success col-1" type="submit" (click)="createPattern()">+</button>
+            <div *ngFor="let pattern of patterns">
+                <div class="row">
+                    <label class="form-label col-1"> </label>
+                    <input id="{{pattern.id}}" placeholder="Escriba el Pattern" type="text" style="margin-top: 5px;" class="col form-control" required/>&nbsp;
+                    <button class="btn btn-danger col-1" type="submit" style="margin-top: 5px;" (click)="deletePattern(pattern.id)">x</button>
+                </div>
+            </div>
+        </div>
+        <div class="qya row">
+            <label class="form-label col-1">Response</label>
+            <input placeholder="Escriba el Response" type="text" class="col form-control" required/>&nbsp;
+            <button class="btn btn-success col-1" type="submit" (click)="createResponse()">+</button>
+            <div *ngFor="let response of responses">
+                <div class="row">
+                    <label class="form-label col-1"> </label>
+                    <input id="{{response.id}}" placeholder="Escriba el Response" type="text" style="margin-top: 5px;" class="col form-control" required/>&nbsp;
+                    <button class="btn btn-danger col-1" type="submit" style="margin-top: 5px;" (click)="deleteResponse(response.id)">x</button>
+                </div>
+            </div>
+        </div>
+        <div class="qya row">
+            <button class="btn btn-primary" type="submit">Ingresar</button>
+        </div>
+    </form>
+
+</div>
